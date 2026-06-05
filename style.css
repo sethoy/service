@@ -1,0 +1,420 @@
+/* Reset and Base Styles */
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  /* Header / Logo Section */
+  .header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .logo-placeholder {
+    display: inline-block;
+    text-align: center;
+    color: #1a2b4c;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  
+  .logo-placeholder span.orange-text {
+    color: #f39200;
+  }
+  
+  .logo-placeholder .tagline {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #000;
+    margin-top: 5px;
+  }
+
+  /* Promo Banner */
+  .promo-banner {
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    /* References the provided image verbatim */
+    background-image: url('image_891a48.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Dark overlay to make text pop against the image */
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /*background-color: rgba(0, 0, 0, 0.45);*/
+    background: url(images/welcome-bg.jpg);
+    z-index: 1;
+  }
+
+  /* Hero Content Container */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  }
+
+  /* Form Elements */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .input-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .input-wrapper input {
+    width: 100%;
+    padding: 18px 45px 18px 15px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+  }
+
+  .input-wrapper input::placeholder {
+    color: #888;
+  }
+
+  /* Styling for the small red icon inside the input */
+  .input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #d9534f;
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 8px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    background-color: #f39200;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; /* Pill shape */
+    padding: 16px;
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .submit-btn:hover {
+    background-color: #e08600;
+  }
+
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 32px;
+    }
+    .promo-banner {
+      font-size: 16px;
+    }
+  }
+  /* --- As Seen On Section --- */
+.as-seen-on {
+  background-color: #1c204d; /* Dark Navy Background */
+  padding: 40px 20px;
+}
+
+.as-seen-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Flexbox setup for the text with flanking lines */
+.as-seen-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.as-seen-header::before,
+.as-seen-header::after {
+  content: "";
+  flex-grow: 1;
+  background-color: #ffffff;
+  height: 1px;
+  opacity: 0.6;
+  max-width: 300px; /* Controls how long the horizontal lines get */
+}
+
+.as-seen-header span {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 0 20px;
+}
+
+.as-seen-logos img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* Responsive Design for Mobile (Merge this into your existing media query if you already have one for 768px) */
+@media (max-width: 768px) {
+  .as-seen-header span {
+    font-size: 18px;
+  }
+}
+/* --- Award Winning Section --- */
+.award-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.award-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.award-section h2 {
+  color: #f39200; /* Brand Orange */
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.5px;
+}
+
+.award-section p {
+  color: #1a2b4c; /* Dark Navy Blue */
+  font-size: 24px;
+  font-weight: 700; /* Oswald 700 for that slightly thicker look */
+  margin: 0;
+}
+
+/* Responsive Design for Mobile (Merge this into your existing media query if you have one) */
+@media (max-width: 768px) {
+  .award-section {
+    padding: 40px 20px;
+  }
+  
+  .award-section h2 {
+    font-size: 30px;
+  }
+  
+  .award-section p {
+    font-size: 18px;
+  }
+}
+/* --- Why Get a Home Warranty Section --- */
+.why-warranty-section {
+  background-color: #f7f8f9; /* Very light gray background */
+  padding: 70px 20px;
+  text-align: center;
+  color: #1a2b4c; /* Dark Navy Blue */
+}
+
+.why-warranty-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-warranty-section h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.warranty-desc {
+  font-family: Arial, Helvetica, sans-serif; /* Reverting to standard sans-serif for readability */
+  font-size: 18px;
+  line-height: 1.5;
+  color: #222;
+  margin: 0 auto 50px auto;
+  max-width: 800px;
+}
+
+/* Flexbox setup for the 3 columns */
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.feature-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-icon {
+  max-width: 130px;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.feature-item h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .why-warranty-section h2 {
+    font-size: 32px;
+  }
+  
+  .warranty-desc {
+    font-size: 16px;
+  }
+  
+  /* Hides the manual line breaks on mobile so text flows naturally */
+  .desktop-br {
+    display: none; 
+  }
+}
+/* Container styling */
+.cta-footer-section {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* Blue CTA Banner */
+.cta-banner {
+  background-color: #0a2558; /* Deep blue background from Screenshot 2026-06-06 015817.png */
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cta-banner h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+}
+
+/* Orange Pill Button */
+.cta-button {
+  display: inline-block;
+  background-color: #ff9900; /* Vibrant orange from screenshot */
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 60px;
+  border-radius: 50px; /* Gives the perfect pill shape */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #e08800;
+}
+
+/* Legal Disclaimer Block */
+.disclaimer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  color: #666666;
+  font-size: 0.75rem; /* Small text layout */
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.disclaimer-container p {
+  margin-bottom: 15px;
+}
+
+/* Dark Footer */
+.site-footer {
+  background-color: #030d22; /* Very dark blue footer background */
+  color: #a0aab5;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.site-footer a {
+  color: #a0aab5;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer p {
+  margin: 4px 0;
+}
+body {
+    position: relative !important;
+    min-height: 100vh !important;
+}
+
+/* The Invisible Full-Page Overlay */
+.global-page-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 500 !important; /* Sits above standard text backgrounds */
+    cursor: pointer !important;
+}
